@@ -48,7 +48,9 @@ class LoginPage extends StatelessWidget {
               SizedBox(height: 32),
               ElevatedButton(
                 onPressed: () {
+                  if(passwordController.text == '123123' && emailController.text == 'teste@teste.teste'){
                   Navigator.push( context, MaterialPageRoute(builder: (context) => ConstructionSitesListPage()), );
+                  }
                 },
                 child: Text('Login'),
                 style: ElevatedButton.styleFrom(

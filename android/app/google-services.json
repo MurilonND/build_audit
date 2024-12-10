@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "703102560347",
+    "project_id": "build-audit-f43c7",
+    "storage_bucket": "build-audit-f43c7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:703102560347:android:22c0c66d82a59972fb777e",
+        "android_client_info": {
+          "package_name": "com.build.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAbNmUe1Phx6WukL0vRkQUZfNRtujqAfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
