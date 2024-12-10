@@ -4,8 +4,9 @@ import 'dart:convert';
 
 class ChecklistPage extends StatefulWidget {
   final String apartmentName;
+  final String tower;
 
-  ChecklistPage({Key? key, required this.apartmentName}) : super(key: key);
+  ChecklistPage({Key? key, required this.apartmentName, required this.tower}) : super(key: key);
 
   @override
   _ChecklistPageState createState() => _ChecklistPageState();
@@ -23,7 +24,7 @@ class _ChecklistPageState extends State<ChecklistPage> {
   // Carregar checklist específico para o apartamento usando 'checklist_<apartmentName>'
   Future<void> _loadChecklist() async {
     final prefs = await SharedPreferences.getInstance();
-    final data = prefs.getString('checklist_${widget.apartmentName}');
+    final data = prefs.getString('checklist_${widget.apartmentName}_${widget.tower}');
     if (data != null) {
       setState(() {
         checklistItems = List<Map<String, dynamic>>.from(json.decode(data));
@@ -37,7 +38,7 @@ class _ChecklistPageState extends State<ChecklistPage> {
   // Salvar checklist específico para o apartamento
   Future<void> _saveChecklist() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString('checklist_${widget.apartmentName}', json.encode(checklistItems));
+    await prefs.setString('checklist_${widget.apartmentName}_${widget.tower}', json.encode(checklistItems));
   }
 
   void _addChecklistItem(String title) {

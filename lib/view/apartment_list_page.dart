@@ -121,7 +121,7 @@ class _ApartmentListPageState extends State<ApartmentListPage> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ChecklistPage(apartmentName: apartment['title'] ?? ''),
+                        builder: (context) => ChecklistPage(apartmentName: apartment['title'] ?? '', tower: widget.towerName,),
                       ),
                     );
                   },
