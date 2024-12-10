@@ -22,8 +22,13 @@ class _DocumentPageState extends State<DocumentPage> {
   }
 
   Future<void> loadPdf() async {
+    // Carregar os bytes do PDF
     final ByteData bytes = await rootBundle.load('lib/mockdata/file.pdf');
+    
+    // Obter o diretório de documentos do dispositivo
     final String path = 'lib/mockdata/file.pdf';
+    
+    // Salvar o PDF no diretório de documentos
     final File file = File(path);
     await file.writeAsBytes(bytes.buffer.asUint8List(), flush: true);
 

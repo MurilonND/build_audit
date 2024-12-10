@@ -7,10 +7,6 @@ class ConstructionSitesListPage extends StatelessWidget {
   // Exemplo de lista de construções
   final List<Map<String, String>> constructions = [
     {'title': 'Edifício Alfa', 'description': 'Uma construção residencial moderna.'},
-    {'title': 'Centro Comercial Beta', 'description': 'Shopping com várias lojas.'},
-    {'title': 'Fábrica Gama', 'description': 'Instalação industrial em expansão.'},
-    {'title': 'Hospital Delta', 'description': 'Centro de saúde de última geração.'},
-    {'title': 'Escritório Zeta', 'description': 'Prédio corporativo inovador.'},
   ];
 
   @override
